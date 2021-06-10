@@ -1,0 +1,287 @@
+:root{
+  --primary-color : white;
+  --second-color :#ff6f44;
+  --third-color : #f27e38;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+.header {
+  height:15vh;
+  background-color:var(--primary-color);
+  border-bottom: solid;
+}
+
+.header h1{
+  font-size:120px;
+  color:black;
+  text-align:center;
+  font-family:"Six Caps",sans-serif;
+
+}
+
+/*** Menu ***/
+
+.btn-group button,
+.btn-group input[type="submit"] {
+  background-color: var(--second-color);
+  border: 5px solid var(--primary-color);
+  color: white;
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left; 
+  font-size: 12px;
+}
+
+.btn-group .primary{
+  width:33%;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; 
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:hover {
+  background-color: var(--third-color);
+}
+
+.presentation {
+  margin-left:2%;
+  margin-right:2%;
+  text-align:justify;
+  font-family:"Raleway",serif;
+  height: 40vh;
+}
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+footer p{
+  font-family:"Padauk",serif;
+  color:white;
+}
+
+
+/*** Gestion des formulaires ***/
+
+.form{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; 
+  margin-top: 5px;
+}
+
+.form select, .form .request{
+  width: 45%;
+}
+
+.form input{
+  width: 5%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.center-component  {
+ width: 20%; 
+ height: 200px; 
+ float: none; 
+ position: absolute;
+ top: 25%;
+ left: 40%;
+}
+
+.center-element{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/*** Position flottante ***/
+
+.float-right{
+  height: 100%;
+  width: 20%;
+  float: right; 
+}
+
+.float-right img{
+  height : 100%;
+  width: 100%;  
+  display:block;
+}
+
+.float-left{  
+  float: left;
+  width: 20%;
+  height: 100%;  
+  margin-top: 5vh;
+
+}
+
+/*** Barre de recherche ***/
+
+.search_bar{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+.search_bar form input{
+  height: 30px;
+  width: 45%;
+}
+
+.search_bar form input::placeholder{
+  font-style:italic;  
+
+}
+
+.search_bar form button{
+  height: 34px;
+  width: 30px;
+}
+
+/*** Popup for login ***/
+
+.popup {
+  position:absolute;
+  top:-150%;
+  left:50%;
+  opacity:0;
+  transform:translate(-50%,-50%) scale(1.25);
+  width:380px;
+  padding:20px 30px;
+  background:#fff;
+  box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15);
+  border-radius:10px;
+  transition:top 0ms ease-in-out 200ms,
+             opacity 200ms ease-in-out 0ms,
+             transform 200ms ease-in-out 0ms; 
+  font-family:"Padauk",serif;
+}
+.popup.active {
+  top:50%;
+  opacity:1;
+  transform:translate(-50%,-50%) scale(1);
+  transition:top 0ms ease-in-out 0ms,
+             opacity 200ms ease-in-out 0ms,
+             transform 200ms ease-in-out 0ms;
+}
+.popup .close-btn {
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:15px;
+  height:15px;
+  background:#888;
+  color:#eee;
+  text-align:center;
+  line-height:15px;
+  border-radius:15px;
+  cursor:pointer;
+}
+.popup .form h2 {
+  text-align:center;
+  color:#222;
+  margin:10px 0px 20px;
+  font-size:25px;
+  font-family:"Roboto Condensed",serif;
+}
+.popup .form .form-element {
+  margin:15px 0px;
+}
+.popup .form .form-element label {
+  font-size:14px;
+  color:#222;
+}
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
+  margin-top:5px;
+  display:block;
+  width:94%;
+  padding:10px;
+  outline:none;
+  border:1px solid #aaa;
+  border-radius:5px;
+  padding-right:-10px;
+}
+
+.popup .form .form-element input[type="submit"] {
+  width:108%;
+  height:40px;
+  border:none;
+  outline:none;
+  font-size:16px;
+  background:var(--second-color);
+  color:#f5f5f5;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/***********************************/
+
+.autobuild input[type="text"], .autobuild select{
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.autobuild legend{
+  font-size:25px;
+  margin-left: 20px;
+
+}
+
+.autobuild select{
+  width: 320px;
+}
+
+.autobuild label{
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.autobuild button {
+  width:80%;
+  height:40px;
+  border:none;
+  outline:none;
+  font-size:16px;
+  background:var(--second-color);
+  color:#f5f5f5;
+  border-radius:10px;
+  cursor:pointer;
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--second-color);
+}
+
+footer p{
+  font-family:"Padauk",serif;
+  color:white;
+}
