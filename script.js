@@ -1,5 +1,6 @@
-let liste = [];
-let filters = {};
+const liste = [];
+let listeFilter = [];
+let filtersSelected = {};
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
@@ -41,6 +42,7 @@ const loadJSON = (link) => {
             response.json().then(
                 (data) => {
                     liste.push(...data);
+                    filter();
                     display();
                 }
             );
@@ -62,35 +64,36 @@ const init = () => {
 // On change du slider
 const onSliderChange = (prixSelect) => {
     // Ajout du changement dans le filtre
-    filters['prix'] = prixSelect;
+    filtersSelected['prix'] = prixSelect;
+    filter();
     display();
 }
 
 function onCheckBoxChange(event) {
     // Ajout de l'état du checkbox dans le filtre 
     let input = event.target;
-    if (filters[input.dataset.filter] == null) {
-        filters[input.dataset.filter] = [];
+    if (filtersSelected[input.dataset.filter] == null) {
+        filtersSelected[input.dataset.filter] = [];
     }
-    let tab = filters[input.dataset.filter];
+    let tab = filtersSelected[input.dataset.filter];
     let index = tab.indexOf(input.id);
     if (index > -1) {
         tab.splice(index, 1);
     } else {
         tab.push(input.id);
     }
-    console.log(filters);
+    /*console.log(filters);*/
+    filter();
     display();
 }
 
-function display() {
-    console.log(filters);
-    let listeFiltre = liste.filter(
+function filter() {
+    listeFilter = liste.filter(
         pc => {
             let status = true;
-            for (const [key, value] of Object.entries(filters)) {
+            for (const [key, value] of Object.entries(filtersSelected)) {
                 if (key == 'prix') {
-                    status &= pc.prix < Number(filters.prix);
+                    status &= pc.prix < Number(filtersSelected.prix);
                 } else {
                     if (value.length > 0) {
                         status &= (value.indexOf(pc[key]) > -1);
@@ -99,15 +102,18 @@ function display() {
             }
             return status;
         });
+}
+
+function display() {
     let elementHTML = "";
     let resultatFiltre = document.getElementById("resultatFiltre");
 
-    if (listeFiltre.length == 0) {
-        if (!isFiltersEmpty(filters)) {
+    if (listeFilter.length == 0) {
+        if (isFiltersEmpty(filtersSelected)) {
             resultatFiltre.innerHTML = "";
         }
     } else {
-        listeFiltre.forEach(element => {
+        listeFilter.forEach(element => {
             elementHTML = elementHTML + createPC(element.nom, element.prix, element.marque, element.type);
 
             resultatFiltre.innerHTML = elementHTML;
@@ -140,4 +146,28 @@ function dropDown(div) {
     } else {
         div.style.display = "none";
     }
+}
+
+function select(select) {
+    filter();
+    switch (Number(select.value)) {
+        case 1:
+            listeFilter = listeFilter.sort(function(a, b) {
+                return a.name - b.name;
+            });
+            break;
+        case 2:
+            listeFilter = listeFilter.sort(function(a, b) {
+                return a.prix - b.prix;
+            });
+            break;
+        case 3:
+            listeFilter = listeFilter.sort(function(a, b) {
+                return b.prix - a.prix;
+            });
+            break;
+        default:
+            break;
+    }
+    display();
 }

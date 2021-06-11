@@ -1,0 +1,33 @@
+:root {
+    --primary-color: white;
+    --second-color: #ff6f44;
+    --third-color: #f27e38;
+    --size-header: 15vh;
+    --size-main: 80vh;
+    --size-footer: 5vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* Taille */
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: var(--size-header) var(--size-main) var(--size-footer);
+    /* Autres */
+    font-family: "Padauk", serif;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}

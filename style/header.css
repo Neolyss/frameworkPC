@@ -1,0 +1,43 @@
+header {
+    /* Couleurs */
+    color: var(--second-color);
+    background-color: var(--primary-color);
+    /* Taille */
+    width: 100%;
+    height: var(--size-header);
+    /* Positionnement */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* Ligne */
+    border-bottom: 0.15em solid black;
+}
+
+header * {
+    height: 50%;
+}
+
+.headerBtn {
+    width: 20%;
+}
+
+header>h1 {
+    text-align: center;
+    font-size: 3em;
+    height: auto;
+}
+
+header button {
+    color: var(--primary-color);
+    background-color: var(--second-color);
+    border: none;
+}
+
+.headerBtn>button {
+    height: 100%;
+    width: 100%;
+}

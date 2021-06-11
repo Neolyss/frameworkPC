@@ -1,9 +1,14 @@
-<div class="header">
-	<div class="btn-group">
-	  <a href="home.php"><button class="primary">HOME</button></a>
-		<h1 style="width: 30%; margin-right: auto;margin-left:auto; ">my PC Finder</h1>
-	  <button id="show-login" class="primary" style="position: absolute;top: 0%;right: 0%;">OUR NEW OPTION AUTOBUILD</button>
-	</div>
+<header>
+	<a href="home.php" class="headerBtn"><button>HOME</button></a>
+	<h1>MY PC FINDER</h1>
+	<button id="show-login" class="headerBtn">OUR NEW OPTION AUTOBUILD</button>
+</header>
 
-	
-</div>	
+<!-- <script type="text/javascript">
+  document.querySelector("#show-login").addEventListener("click",function(){
+  document.querySelector(".popup").classList.add("active");
+});
+document.querySelector(".popup .close-btn").addEventListener("click",function(){
+  document.querySelector(".popup").classList.remove("active");
+});
+</script> -->
