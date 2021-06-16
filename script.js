@@ -1,6 +1,7 @@
 const liste = [];
 let listeFilter = [];
 let filtersSelected = {};
+let sort = 0;
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
@@ -43,6 +44,7 @@ const loadJSON = (link) => {
                 (data) => {
                     liste.push(...data);
                     filter();
+                    sortList();
                     display();
                 }
             );
@@ -66,6 +68,7 @@ const onSliderChange = (prixSelect) => {
     // Ajout du changement dans le filtre
     filtersSelected['prix'] = prixSelect;
     filter();
+    sortList();
     display();
 }
 
@@ -84,6 +87,14 @@ function onCheckBoxChange(event) {
     }
     /*console.log(filters);*/
     filter();
+    sortList();
+    display();
+}
+
+function select(select) {
+    filter();
+    sort = Number(select.value);
+    sortList();
     display();
 }
 
@@ -148,9 +159,8 @@ function dropDown(div) {
     }
 }
 
-function select(select) {
-    filter();
-    switch (Number(select.value)) {
+function sortList() {
+    switch (sort) {
         case 1:
             listeFilter = listeFilter.sort(function(a, b) {
                 return a.name - b.name;
@@ -169,5 +179,18 @@ function select(select) {
         default:
             break;
     }
-    display();
+}
+
+function addAutobuild() {
+    let mask = document.getElementById('maskAutobuild');
+    mask.style.display = 'block';
+    let form = document.getElementById('autobuildForm');
+    form.style.display = 'flex';
+}
+
+function removeAutobuild() {
+    let mask = document.getElementById('maskAutobuild');
+    mask.style.display = 'none';
+    let form = document.getElementById('autobuildForm');
+    form.style.display = 'none';
 }

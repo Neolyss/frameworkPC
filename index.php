@@ -56,7 +56,7 @@
                     <input type="checkbox" id="ROJ" data-filter="marque" class='checkBox'>- ROJ
                     <br>
                 </div>
-                 <br>
+                <br>
             </div>
         </nav>
         <main>
@@ -73,5 +73,24 @@
             </div>
         </main>
         <?php include('templates/footer.php')?>
+        <div id="maskAutobuild" style="display: none;"></div>
+        <form id='autobuildForm' method='post' action='result.php' style="display: none;">
+            <fieldset>
+                <div>
+                    <h1>Autobuild</h1>
+                        <span><label>Price</label><input type='text' name='price' placeholder='$' required></span>
+                        <span><label>Categories</label>
+                            <select name='categories' size='1'>
+                                <option value = ''></option>
+                                <option value = 'Gamer'>Gamer</option>
+                                <option value = 'Designer'>Designer</option>
+                                <option value = 'Office'>Office</option>
+                            </select>
+                        </span>
+                    <button id='bpAutobuild'>Find my PC!</button>
+                </div >
+                <img src='image/close.png' onclick ='removeAutobuild()'>
+            </fieldset>
+        </form>
     </body>
 </html>

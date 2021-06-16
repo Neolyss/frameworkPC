@@ -22,28 +22,6 @@
   ?>
 
   <div class="presentation">
-    <div class="float-left">
-        <form class="autobuild">
-            <fieldset>
-              <legend>Autobuild</legend>
-
-              <label>Price</label><br>
-              <input type="text" name="price" placeholder="$" required><br><br>
-
-              <label>Categories</label><br>
-              
-              <select name="categories" size="1">                
-                <option value=""></option>
-                <option value="Gamer">Gamer</option>
-                <option value="Designer">Designer</option>
-                <option value="Office">Office</option>
-              </select><br><br>
-
-              <button id="bpAutobuild">Find my PC!</button>
-            </fieldset>
-        </form>
-    </div>
-
     <div class="center-component">
         <form class="autobuild">
             <fieldset>
