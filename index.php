@@ -32,9 +32,9 @@
                 <!-- Categories -->
                 <input type="button" id="categories" value="Categories" />
                 <div id="divCategories" class="divFilter">
-                    <label><input type="checkbox" id="gaming" data-filter="categorie" class='checkBox'>Gaming</label>
-                    <label><input type="checkbox" id="office" data-filter="categorie" class='checkBox'>Office</label>
-                    <label><input type="checkbox" id="design" data-filter="categorie" class='checkBox'>Design</label>
+                    <label><input type="checkbox" id="Gaming" data-filter="categorie" class='checkBox'>Gaming</label>
+                    <label><input type="checkbox" id="Office" data-filter="categorie" class='checkBox'>Office</label>
+                    <label><input type="checkbox" id="Design" data-filter="categorie" class='checkBox'>Design</label>
                 </div>
 
                 <!-- Filter -->
@@ -75,10 +75,10 @@
                         <span><label>Price</label><input type='text' name='price' placeholder='$' required></span>
                         <span><label>Categories</label>
                             <select name='categories' size='1'>
-                                <option value = ''></option>
-                                <option value = 'Gamer'>Gamer</option>
-                                <option value = 'Designer'>Designer</option>
-                                <option value = 'Office'>Office</option>
+                                <option value=''></option>
+                                <option value='Gaming'>Gaming</option>
+                                <option value='Design'>Design</option>
+                                <option value='Office'>Office</option>
                             </select>
                         </span>
                     <button id='bpAutobuild'>Find my PC!</button>

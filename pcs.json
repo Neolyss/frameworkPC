@@ -30,7 +30,8 @@
         "batterie" : null,
         "prix": 1000,
         "image" : "https://images-na.ssl-images-amazon.com/images/I/81IsmpH-wJL._AC_SX425_.jpg",
-        "rate" : 3.5
+        "rate" : 3.5,
+        "categorie" : "Gaming"
     },
     {
         "marque": "ASSER",
@@ -63,7 +64,8 @@
         "batterie" : null,
         "prix": 300,
         "image" : "http://static.galerieslafayette.com/media/3004090/300409081128/G_300409081128_0_VFP_1.jpg",
-        "rate" : 2.5
+        "rate" : 2.5,
+        "categorie" : "Gaming"
     },
     {
         "marque": "ASSER",
@@ -96,7 +98,8 @@
         "batterie" : null,
         "prix": 500,
         "image" : "http://static.galerieslafayette.com/media/3004092/300409285153/G_300409285153_0_VFP_1.jpg",
-        "rate" : 4
+        "rate" : 4,
+        "categorie" : "Gaming"
     },
     {
         "marque": "ASSER",
@@ -141,7 +144,8 @@
         },
         "prix": 900,
         "image" : "https://icdn.digitaltrends.com/image/digitaltrends/acer-swift-5-review-15-1500x1000.jpg",
-        "rate" : 1.5
+        "rate" : 1.5,
+        "categorie" : "Office"
     },
     {
         "marque": "ASSER",
@@ -186,7 +190,8 @@
         },
         "prix": 900,
         "image" : "https://dyw7ncnq1en5l.cloudfront.net/optim/product/54/54183/700c3a84-swift-sf314-41-r1x6__450_400.jpeg",
-        "rate" : 5
+        "rate" : 5,
+        "categorie" : "Office"
     },
     {
         "marque": "ASSER",
@@ -231,7 +236,8 @@
         },
         "prix": 800,
         "image" : "https://www.laptopspirit.fr/wp-content/uploads/new/2020/05/Acer-Swift-SF314-42-R1M6-dd.jpg",
-        "rate" : 1.5
+        "rate" : 1.5,
+        "categorie" : "Gaming"
     },
     {
         "marque": "ROJ",
@@ -276,7 +282,8 @@
         },
         "prix": 1700,
         "image" : "https://rog.asus.com/media/1578098363696.jpg",
-        "rate" : 4.5
+        "rate" : 4.5,
+        "categorie" : "Gaming"
     },
     {
         "marque": "ROJ",
@@ -321,7 +328,8 @@
         },
         "prix": 1500,
         "image" : "https://genk.mediacdn.vn/139269124445442048/2021/1/13/2021-01-13165815-16105324004801422974177.jpg",
-        "rate" : 5
+        "rate" : 5,
+        "categorie" : "Design"
     },
     {
         "marque": "Azuss",
@@ -366,7 +374,8 @@
         },
         "prix": 1200,
         "image" : "https://cdn.comparez-malin.fr/img/asus/2018/5bf7b6fdf841409d028b4567/asus-zenbook-13-ux333-bleu-1.jpg",
-        "rate" : 3.5
+        "rate" : 3.5,
+        "categorie" : "Design"
     },
     {
         "marque": "Azuss",
@@ -411,7 +420,8 @@
         },
         "prix": 900,
         "image" : "https://www.laptopspirit.fr/wp-content/uploads/new/Asus-Zenbook-3U-UX390UAK-GS115T-face.jpg",
-        "rate" : 2.5
+        "rate" : 2.5,
+        "categorie" : "Design"
     },
     {
         "marque": "Azuss",
@@ -456,7 +466,8 @@
         },
         "prix": 700,
         "image" : "https://www.topachat.com/boutique/img/in/in2000/in20001902/in2000190202@2x.jpg",
-        "rate" : 4.5
+        "rate" : 4.5,
+        "categorie" : "Office"
     },
     {
         "marque": "Azuss",
@@ -501,7 +512,8 @@
         },
         "prix": 700,
         "image" : "https://dyw7ncnq1en5l.cloudfront.net/optim/produits/0/42059/vivobook-14_121decbd248243f7__w1280.jpg",
-        "rate" : 3
+        "rate" : 3,
+        "categorie" : "Office"
     },
     {
         "marque": "Azuss",
@@ -546,6 +558,7 @@
         },
         "prix": 400,
         "image" : "https://www.notebookcheck.net/uploads/tx_nbc2/AsusVivoBookE12-E203NA___1_.JPG",
-        "rate" : 5
+        "rate" : 5,
+        "categorie" : "Office"
     }
 ]

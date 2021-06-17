@@ -25,7 +25,7 @@ function showResult(params) {
     //console.log(params);
     let listFilter = liste.filter(
         pc => {
-            return pc.categorie = categorie;
+            return pc.categorie === categorie;
         }
     );
     console.log(listFilter);
@@ -43,7 +43,7 @@ const createPC = (pc) => {
         '<p>Nom : ' + pc.nom + '</p>' +
         '<p>Marque : ' + pc.marque + '</p>' +
         '<p>Prix : ' + pc.prix + '</p>' +
-        '<p>Type : ' + pc.type + '</p>' +
+        '<p>Type : ' + pc.type + ' | Categorie : ' + pc.categorie + '</p>' +
         '<p>Processeur : ' + pc.system.cpu.marque + '</p>' +
         '<p>Carte Graphique : ' + pc.system.cg.marque + '</p>' +
         '<p>Rate : ' + pc.rate + '</p>' +
