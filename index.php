@@ -3,7 +3,7 @@
         <meta charset="utf-8">
         <title>Research</title>
         <?php include("templates/head.php"); ?>
-        <script src="script.js"></script>
+        <script src="scripts/script.js"></script>
     </head>
     <body>
         <?php include('templates/header.php')?>
@@ -12,51 +12,45 @@
                 <h1>Research options</h1>
                 <!-- Components -->
                 <input type="button" id="components" value="Components" />
-                <br>
-                <div id="divComponents">
+                <div id="divComponents" class="divMainFilter">
                     <input type="button" id="type" value="PC Type">
-                    <div id="divType">
-                        <input type="checkbox" id="fixe" data-filter="type" class='checkBox'><label>Fixe</label>
-                        <input type="checkbox" id="portable" data-filter="type" class='checkBox'><label>Portable</label>
+                    <div id="divType" class="divFilter">
+                        <label><input type="checkbox" id="fixe" data-filter="type" class='checkBox'>Fixe</label>
+                        <label><input type="checkbox" id="portable" data-filter="type" class='checkBox'>Portable</label>
                     </div>
-                    <br>
-                    <input type="checkbox" id="RAM" class='checkBox'>- RAM
-                    <br>
-                    <input type="checkbox" id="Processor" class='checkBox'>- Processor
-                    <br>
+                    <input type="button" id="processor" value="Processor">
+                    <div id="divCpuMarque" class="divFilter">
+                        <label><input type="checkbox" id="INTELLE" data-filter="system.cpu.marque" class='checkBox'>INTELLE</label>
+                        <label><input type="checkbox" id="AMDé" data-filter="system.cpu.marque" class='checkBox'>AMDé</label>
+                    </div>
+                    <input type="button" id="cg" value="GPU">
+                    <div id="divCgMarque" class="divFilter">
+                        <label><input type="checkbox" id="INTELLE" data-filter="system.cg.marque" class='checkBox'>INTELLE</label>
+                        <label><input type="checkbox" id="NVADIA" data-filter="system.cg.marque" class='checkBox'>NVADIA</label>
+                    </div>
                 </div>
                 <!-- Categories -->
                 <input type="button" id="categories" value="Categories" />
-                <br>
-                <div id="divCategories">
-                    <input type="checkbox" id="gaming" data-filter="categorie" class='checkBox'>- Gaming
-                    <br>
-                    <input type="checkbox" id="office" data-filter="categorie" class='checkBox'>- Office
-                    <br>
-                    <input type="checkbox" id="design" data-filter="categorie" class='checkBox'>- Design
-                    <br>
-                    <br>
+                <div id="divCategories" class="divFilter">
+                    <label><input type="checkbox" id="gaming" data-filter="categorie" class='checkBox'>Gaming</label>
+                    <label><input type="checkbox" id="office" data-filter="categorie" class='checkBox'>Office</label>
+                    <label><input type="checkbox" id="design" data-filter="categorie" class='checkBox'>Design</label>
                 </div>
 
                 <!-- Filter -->
                 <h5>Filtrer les ordinateurs par prix</h5>
-                <div class="slidecontainer">
+                <div class="slidecontainer" class="divFilter">
                     <input type="range" min="100" max="2000" value="100" class="slider" name="filtrePrix" id="filtrePrix">
                     <label id="filtrePrixLabel" for="filtrePrix"></label>€
                 </div>
 
                 <!-- Marque -->
                 <input type="button" id="brand" value="Brand" />
-                <br>
-                <div id="divBrand">
-                    <input type="checkbox" id="ASSER" data-filter="marque" class='checkBox'>- ASSER
-                    <br>
-                    <input type="checkbox" id="Azuss" data-filter="marque" class='checkBox'>- Azuss
-                    <br>
-                    <input type="checkbox" id="ROJ" data-filter="marque" class='checkBox'>- ROJ
-                    <br>
+                <div id="divBrand" class="divFilter">
+                    <label><input type="checkbox" id="ASSER" data-filter="marque" class='checkBox'>ASSER</label>
+                    <label><input type="checkbox" id="Azuss" data-filter="marque" class='checkBox'>Azuss</label>
+                    <label><input type="checkbox" id="ROJ" data-filter="marque" class='checkBox'>ROJ</label>
                 </div>
-                <br>
             </div>
         </nav>
         <main>

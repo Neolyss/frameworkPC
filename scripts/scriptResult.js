@@ -34,7 +34,19 @@ function showResult(params) {
     document.getElementsByTagName('main')[0].innerHTML += createPC(val);
 }
 
+// Création d'un element html pc
 const createPC = (pc) => {
-    return '<div class="card">Nom : ' + pc.nom + ' <br/>Marque : ' + pc.marque + ' <br/> Prix : ' + pc.prix + ' <br/> Type : ' +
-        pc.type + '</div>';
+    return '' +
+        '<div class="card">' +
+        '<img src="' + pc.image + '" alt="img">' +
+        '<div class="info">' +
+        '<p>Nom : ' + pc.nom + '</p>' +
+        '<p>Marque : ' + pc.marque + '</p>' +
+        '<p>Prix : ' + pc.prix + '</p>' +
+        '<p>Type : ' + pc.type + '</p>' +
+        '<p>Processeur : ' + pc.system.cpu.marque + '</p>' +
+        '<p>Carte Graphique : ' + pc.system.cg.marque + '</p>' +
+        '<p>Rate : ' + pc.rate + '</p>' +
+        '</div>' +
+        '</div>';
 }

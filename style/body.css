@@ -40,7 +40,7 @@ main {
 
 .card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-self: center;
     position: relative;
@@ -51,6 +51,18 @@ main {
     border-radius: var(--universal-border-radius);
     margin: var(--universal-margin);
     overflow: hidden;
+}
+
+.info {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card > img {
+    width: 20%;
+    height: auto;
 }
 
 :root {
@@ -107,11 +119,36 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
+    /* Display */
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
     /* The main point: */
     overflow-y: auto;
     /* Optional but highly reccomended: enables momentum scrolling on iOS */
     -webkit-overflow-scrolling: touch;
 }
+
+.navContainer > input {
+    background: grey;
+}
+
+.divMainFilter {
+    display: flex;
+    flex-direction: column;
+}
+
+.divMainFilter > input {
+    background: darkgrey;
+}
+
+.divFilter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
 
 #resultat {
     /* Taille */
